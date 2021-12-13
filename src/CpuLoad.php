@@ -2,7 +2,6 @@
 
 namespace Spatie\CpuLoadHealthCheck;
 
-
 use Spatie\CpuLoadHealthCheck\Exceptions\CouldNotMeasureCpuLoad;
 
 class CpuLoad
@@ -11,18 +10,17 @@ class CpuLoad
     {
         $result = sys_getloadavg();
 
-        if (!$result) {
+        if (! $result) {
             throw CouldNotMeasureCpuLoad::make();
         }
 
-        return new self(... $result);
+        return new self(...$result);
     }
 
     public function __construct(
         public float $lastMinute,
         public float $last5Minutes,
         public float $last15Minutes,
-    )
-    {
+    ) {
     }
 }

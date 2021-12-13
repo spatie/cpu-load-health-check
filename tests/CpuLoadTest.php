@@ -1,7 +1,6 @@
 <?php
 
 use Spatie\CpuLoadHealthCheck\CpuLoad;
-use Spatie\CpuLoadHealthCheck\CpuLoadCheck;
 
 it('can measure cpu load', function () {
     expect(CpuLoad::measure())
