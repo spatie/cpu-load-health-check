@@ -48,16 +48,6 @@
     "config": {
         "sort-packages": true
     },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Spatie\\CpuLoadHealthCheck\\CpuLoadHealthCheckServiceProvider"
-            ],
-            "aliases": {
-                "CpuLoadHealthCheck": "Spatie\\CpuLoadHealthCheck\\Facades\\CpuLoadHealthCheck"
-            }
-        }
-    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }
