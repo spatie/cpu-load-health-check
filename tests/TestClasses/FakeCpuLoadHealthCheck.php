@@ -18,8 +18,7 @@ class FakeCpuLoadHealthCheck extends CpuLoadHealthCheck
         float $lastMinute = 0,
         float $last5Minutes = 0,
         float $last15Minutes = 0,
-    ): self
-    {
+    ): self {
         $this->fakeCpuLoad = new CpuLoadCheck($lastMinute, $last5Minutes, $last15Minutes);
 
         return $this;
