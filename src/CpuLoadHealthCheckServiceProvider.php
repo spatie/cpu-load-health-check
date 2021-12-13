@@ -2,9 +2,9 @@
 
 namespace Spatie\CpuLoadHealthCheck;
 
+use Spatie\CpuLoadHealthCheck\Commands\CpuLoadHealthCheckCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Spatie\CpuLoadHealthCheck\Commands\CpuLoadHealthCheckCommand;
 
 class CpuLoadHealthCheckServiceProvider extends PackageServiceProvider
 {
