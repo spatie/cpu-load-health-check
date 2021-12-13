@@ -37,7 +37,8 @@ class CpuLoadHealthCheck extends Check
         $cpuLoad = $this->measureCpuLoad();
 
         $result = Result::make()->shortSummary(
-            "{$cpuLoad->lastMinute} {$cpuLoad->last5Minutes} {$cpuLoad->last15Minutes}");
+            "{$cpuLoad->lastMinute} {$cpuLoad->last5Minutes} {$cpuLoad->last15Minutes}"
+        );
 
         $result->ok();
 

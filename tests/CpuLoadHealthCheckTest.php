@@ -11,7 +11,7 @@ it('it will run ok when CPU load is low', function () {
     expect($result->status)->toBe(Status::ok());
 });
 
-it('will result in an failure when CPU load is too high', function(float $actualLoad, Status $expectedStatus) {
+it('will result in an failure when CPU load is too high', function (float $actualLoad, Status $expectedStatus) {
     $result = FakeCpuLoadHealthCheck::new()
         ->fakeCpuLoad(lastMinute: $actualLoad)
         ->failWhenLoadIsHigherInThePastMinute(1.2)
