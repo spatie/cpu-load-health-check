@@ -2,14 +2,14 @@
 
 namespace Spatie\CpuLoadHealthCheck\Tests\TestClasses;
 
-use Spatie\CpuLoadHealthCheck\CpuLoadCheck;
+use Spatie\CpuLoadHealthCheck\CpuLoad;
 use Spatie\CpuLoadHealthCheck\CpuLoadCheck;
 
 class FakeCpuLoadCheck extends CpuLoadCheck
 {
-    protected CpuLoadCheck $fakeCpuLoad;
+    protected CpuLoad $fakeCpuLoad;
 
-    public function measureCpuLoad(): CpuLoadCheck
+    public function measureCpuLoad(): CpuLoad
     {
         return $this->fakeCpuLoad;
     }
@@ -19,7 +19,7 @@ class FakeCpuLoadCheck extends CpuLoadCheck
         float $last5Minutes = 0,
         float $last15Minutes = 0,
     ): self {
-        $this->fakeCpuLoad = new CpuLoadCheck($lastMinute, $last5Minutes, $last15Minutes);
+        $this->fakeCpuLoad = new CpuLoad($lastMinute, $last5Minutes, $last15Minutes);
 
         return $this;
     }
