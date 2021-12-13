@@ -3,9 +3,9 @@
 namespace Spatie\CpuLoadHealthCheck\Tests\TestClasses;
 
 use Spatie\CpuLoadHealthCheck\CpuLoadCheck;
-use Spatie\CpuLoadHealthCheck\CpuLoadHealthCheck;
+use Spatie\CpuLoadHealthCheck\CpuLoadCheck;
 
-class FakeCpuLoadHealthCheck extends CpuLoadHealthCheck
+class FakeCpuLoadCheck extends CpuLoadCheck
 {
     protected CpuLoadCheck $fakeCpuLoad;
 
