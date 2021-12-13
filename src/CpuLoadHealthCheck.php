@@ -67,8 +67,8 @@ class CpuLoadHealthCheck extends Check
         return $result;
     }
 
-    protected function measureCpuLoad(): CpuLoad
+    protected function measureCpuLoad(): CpuLoadCheck
     {
-        return CpuLoad::measure();
+        return CpuLoadCheck::measure();
     }
 }

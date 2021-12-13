@@ -4,7 +4,7 @@ namespace Spatie\CpuLoadHealthCheck;
 
 use Spatie\CpuLoadHealthCheck\Exceptions\CouldNotMeasureCpuLoad;
 
-class CpuLoad
+class CpuLoadCheck
 {
     public static function measure(): self
     {
