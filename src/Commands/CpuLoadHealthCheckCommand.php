@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Spatie\CpuLoadHealthCheck\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class CpuLoadHealthCheckCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'cpu-load-health-check';
 
     public $description = 'My command';
 
