@@ -39,7 +39,8 @@ class CpuLoadHealthCheck extends Check
         $result = Result::make()
             ->ok()
             ->shortSummary(
-                "{$cpuLoad->lastMinute} {$cpuLoad->last5Minutes} {$cpuLoad->last15Minutes}")
+                "{$cpuLoad->lastMinute} {$cpuLoad->last5Minutes} {$cpuLoad->last15Minutes}"
+            )
             ->meta([
                 'last_minute' => $cpuLoad->lastMinute,
                 'last_5_minutes' => $cpuLoad->last5Minutes,
