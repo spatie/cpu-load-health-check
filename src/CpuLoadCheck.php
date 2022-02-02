@@ -10,6 +10,7 @@ class CpuLoadCheck extends Check
     protected ?float $failWhenLoadIsHigherInTheLastMinute = null;
     protected ?float $failWhenLoadIsHigherInTheLast5Minutes = null;
     protected ?float $failWhenLoadIsHigherInTheLast15Minutes = null;
+    protected bool $onlyInProduction = false;
 
     public function failWhenLoadIsHigherInTheLastMinute(float $load): self
     {
@@ -31,9 +32,20 @@ class CpuLoadCheck extends Check
 
         return $this;
     }
+    
+    public function onlyInProduction(): self
+    {
+        $this->onlyInProduction = true;
+
+        return $this;
+    }
 
     public function run(): Result
     {
+        if($this->onlyInProduction && ! App()->environment('production') ) {
+            return Result::make()->warning()->shortSummary('Only runs in production');
+        }
+        
         $cpuLoad = $this->measureCpuLoad();
 
         $result = Result::make()
