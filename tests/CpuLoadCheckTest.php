@@ -54,3 +54,15 @@ it('will result in an failure when CPU load last 15 minutes is too high', functi
     [1.20, Status::ok()],
     [1.21, Status::failed()],
 ]);
+
+it('will not run in development with onlyInProduction enabled', function() {
+    //
+});
+
+it('will run in production regardless the onlyInProduction setting', function() {
+    //
+});
+
+it('will run in development with onlyInProduction disabled', function() {
+    //
+});
