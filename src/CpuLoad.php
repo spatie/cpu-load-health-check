@@ -8,7 +8,11 @@ class CpuLoad
 {
     public static function measure(): self
     {
-        $result = sys_getloadavg();
+        $result = false;
+
+        if (function_exists('sys_getloadavg')) {
+            $result = sys_getloadavg();
+        }
 
         if (! $result) {
             throw CouldNotMeasureCpuLoad::make();
