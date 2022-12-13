@@ -7,7 +7,7 @@ it('can measure cpu load', function () {
        ->lastMinute->toBeGreaterThan(0)
        ->last5Minutes->toBeGreaterThan(0)
        ->last15Minutes->toBeGreaterThan(0);
-})->skip(fn () => isWindows() === true, 'This feature is not supported on Windows platforms.');
+})->skip(fn () => isWindows(), 'This feature is not supported on Windows platforms.');
 
 function isWindows(): bool
 {
