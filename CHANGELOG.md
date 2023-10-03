@@ -2,6 +2,19 @@
 
 All notable changes to `cpu-load-health-check` will be documented in this file.
 
+## 1.0.4 - 2023-10-03
+
+### What's Changed
+
+- Update tests by @kudashevs in https://github.com/spatie/cpu-load-health-check/pull/15
+- Round load values to 2 decimals by @clementmas in https://github.com/spatie/cpu-load-health-check/pull/31
+
+### New Contributors
+
+- @clementmas made their first contribution in https://github.com/spatie/cpu-load-health-check/pull/31
+
+**Full Changelog**: https://github.com/spatie/cpu-load-health-check/compare/1.0.3...1.0.4
+
 ## 1.0.3 - 2022-12-12
 
 ### What's Changed
