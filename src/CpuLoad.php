@@ -17,6 +17,8 @@ class CpuLoad
         if (! $result) {
             throw CouldNotMeasureCpuLoad::make();
         }
+        
+        $result = array_map(fn ($n) => round($n, 2), $result);
 
         return new self(...$result);
     }
