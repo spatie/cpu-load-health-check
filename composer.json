@@ -19,9 +19,9 @@
         "php": "^8.0"
     },
     "require-dev": {
-        "nunomaduro/collision": "^5.10",
-        "pestphp/pest": "^1.21",
-        "pestphp/pest-plugin-laravel": "^1.1",
+        "nunomaduro/collision": "^5.10|^6.1|^7.0|^8.0",
+        "pestphp/pest": "^1.21|^2.3",
+        "pestphp/pest-plugin-laravel": "^1.21|^2.3",
         "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan-deprecation-rules": "^1.0",
         "phpstan/phpstan-phpunit": "^1.0",
