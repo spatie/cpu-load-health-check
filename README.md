@@ -1,8 +1,7 @@
 # A Laravel Health check to monitor CPU load
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/cpu-load-health-check.svg?style=flat-square)](https://packagist.org/packages/spatie/cpu-load-health-check)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/spatie/cpu-load-health-check/run-tests?label=tests)](https://github.com/spatie/cpu-load-health-check/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/spatie/cpu-load-health-check/Check%20&%20fix%20styling?label=code%20style)](https://github.com/spatie/cpu-load-health-check/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
+[![run-tests](https://github.com/spatie/cpu-load-health-check/actions/workflows/run-tests.yml/badge.svg)](https://github.com/spatie/cpu-load-health-check/actions/workflows/run-tests.yml)
 [![PHPStan](https://github.com/spatie/cpu-load-health-check/actions/workflows/phpstan.yml/badge.svg)](https://github.com/spatie/cpu-load-health-check/actions/workflows/phpstan.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/spatie/cpu-load-health-check.svg?style=flat-square)](https://packagist.org/packages/spatie/cpu-load-health-check)
 
