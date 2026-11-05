@@ -10,28 +10,21 @@ jobs:
   test:
     runs-on: ${{ matrix.os }}
     strategy:
-      fail-fast: true
+      fail-fast: false
       matrix:
         os: [ubuntu-latest]
-        php: [8.0, 8.1, 8.2, 8.3]
-        laravel: [8.*, 9.*, 10.*, 11.*]
+        php: ['8.4', '8.5', '8.6']
+        laravel: [12.*, 13.*]
         stability: [prefer-lowest, prefer-stable]
         include:
-          - laravel: 8.*
-            testbench: ^6.23
-          - laravel: 9.*
-            testbench: 7.*
-          - laravel: 10.*
-            testbench: 8.*
-          - laravel: 11.*
-            testbench: 9.*
+          - laravel: 12.*
+            testbench: 10.*
+          - laravel: 13.*
+            testbench: 11.*
         exclude:
-          - php: 8.0
-            laravel: 10.*
-          - php: 8.0
-            laravel: 11.*
-          - php: 8.1
-            laravel: 11.*
+          # Laravel 12's Pest 4 / PHPUnit 12 stack has no PHP 8.6-compatible ParaTest release.
+          - php: '8.6'
+            laravel: 12.*
 
     name: P${{ matrix.php }} - L${{ matrix.laravel }} - ${{ matrix.stability }} - ${{ matrix.os }}
 
@@ -57,4 +50,8 @@ jobs:
           composer update --${{ matrix.stability }} --prefer-dist --no-interaction
 
       - name: Execute tests
-        run: vendor/bin/pest
+        run: |
+          php --version
+          composer show pestphp/pest
+          composer show phpunit/phpunit
+          composer test
